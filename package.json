@@ -1,0 +1,24 @@
+{
+  "name": "edevtools",
+  "version": "1.0.0",
+  "description": "edevtools webapp",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleksm/edevtools.git"
+  },
+  "author": "aleksminaiev@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oleksm/devtools/issues"
+  },
+  "homepage": "https://github.com/oleksm/edevtools#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "winston": "^3.0.0"
+  }
+}

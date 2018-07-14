@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href=/static/favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/dashboard.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">eDevTools</a>
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#">Sign out</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      {{{body}}}
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="/static/assets/js/vendor/popper.min.js"></script>
+    <script src="/static/dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <script>
+    $(document).ready(function(){
+        //and this for good measure
+        $('#url-decoded').keyup(function(){
+          $('#uri-encoded').val(encodeURI($(this).val()));
+          $('#path-encoded').val(encodeURIComponent($(this).val()));
+        });
+        $('#uri-encoded').keyup(function(){
+          $('#url-decoded').val(decodeURI($(this).val()));
+          $('#path-encoded').val(encodeURIComponent(decodeURI($(this).val())));
+        });
+        $('#path-encoded').keyup(function(){
+          $('#url-decoded').val(decodeURIComponent($(this).val()));
+          $('#uri-encoded').val(encodeURI(decodeURIComponent($(this).val())));
+        });
+    });
+    </script>
+
+  </body>
+</html>
